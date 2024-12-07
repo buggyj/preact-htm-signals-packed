@@ -1,0 +1,27 @@
+{
+  "name": "preact-htm-signals-packed ",
+  "version": "0.1.0",
+  "description": "Preact, HTM and Preact Signals in a single module",
+  "type": "module",
+  "main": "dist/standalone.umd.js",
+  "module": "dist/standalone.js",
+  "umd:main": "dist/standalone.umd.js",
+  "scripts": {
+    "prebundle": "npm ls --all -g>dist/gversions.txt",
+    "bundle": "microbundle index.js -o ./dist/standalone.js -f es,umd --no-sourcemap --target web",
+    "postbundle": "npm ls --all  >dist/versions.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buggyj/preact-htm-signals-packed.git"
+  },
+  "homepage": "https://github.com/buggyj/preact-htm-signals-packed",
+  "keywords": [
+  ],
+  "devDependencies": {
+    "@preact/signals": "^1.3.0",
+    "htm": "3.1.1",
+    "microbundle": "^0.15.1",
+    "preact": "^10.23.1"
+  }
+}
